@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(operation == '\u0000' || operation == '-' || operation == '*' || operation == '/') {
+                if((operation == '\u0000' || operation == '-' || operation == '*' || operation == '/') && input.getText() != "") {
                     x = Double.parseDouble(input.getText().toString());
                     opView.setText(input.getText().toString() + ' ' + '+');
                     input.setText("");
