@@ -4,208 +4,301 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context="com.example.vincent.calculator.MainActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/btn9"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="9"
         android:layout_above="@+id/btn6"
+        android:layout_toEndOf="@+id/btn8"
         android:layout_toRightOf="@+id/btn8"
-        android:layout_toEndOf="@+id/btn8" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn9"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn8"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="8"
-        android:layout_toRightOf="@+id/btn7"
+        android:layout_below="@+id/btnClr"
         android:layout_toEndOf="@+id/btn7"
-        android:layout_below="@+id/btnClr" />
+        android:layout_toRightOf="@+id/btn7"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn8"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn7"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="7"
         android:layout_above="@+id/btn5"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn7"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn6"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="6"
         android:layout_above="@+id/btn3"
+        android:layout_toEndOf="@+id/btn5"
         android:layout_toRightOf="@+id/btn5"
-        android:layout_toEndOf="@+id/btn5" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn6"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn5"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="5"
         android:layout_above="@+id/btn3"
+        android:layout_toEndOf="@+id/btn4"
         android:layout_toRightOf="@+id/btn4"
-        android:layout_toEndOf="@+id/btn4" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn5"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn4"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="4"
         android:layout_above="@+id/btn1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn4"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn3"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="3"
         android:layout_above="@+id/btnDecimal"
+        android:layout_toEndOf="@+id/btn2"
         android:layout_toRightOf="@+id/btn2"
-        android:layout_toEndOf="@+id/btn2" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn3"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn2"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="2"
         android:layout_above="@+id/btn0"
+        android:layout_toEndOf="@+id/btn1"
         android:layout_toRightOf="@+id/btn1"
-        android:layout_toEndOf="@+id/btn1" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn2"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btn1"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="1"
         android:layout_above="@+id/btn0"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-        <!--android:layout_alignBaseline="@+id/btn2"-->
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn1"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+    <!--android:layout_alignBaseline="@+id/btn2"-->
 
     <Button
         android:id="@+id/btn0"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="0"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnDecimal"
-        android:layout_toStartOf="@+id/btnDecimal" />
+        android:layout_toStartOf="@+id/btnDecimal"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btn0"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnDecimal"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="."
         android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btn2"
         android:layout_toRightOf="@+id/btn2"
-        android:layout_toEndOf="@+id/btn2" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnDec"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnAdd"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/answer"
-        android:text="+" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnAdd"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnSub"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_above="@+id/btnMult"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="-" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnSub"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnMult"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_above="@+id/btnDiv"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="*" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnMult"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnDiv"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_above="@+id/btnEqual"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="/" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnDiv"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnClr"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="Clear"
         android:layout_above="@+id/btn7"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btn9"
-        android:layout_toStartOf="@+id/btn9" />
+        android:layout_toStartOf="@+id/btn9"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnClr"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnSign"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="+/-"
         android:layout_below="@+id/answer"
+        android:layout_toEndOf="@+id/btn8"
         android:layout_toRightOf="@+id/btn8"
-        android:layout_toEndOf="@+id/btn8" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnSign"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnEqual"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="=" />
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:text="@string/btnEqual"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <TextView
         android:id="@+id/inputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:gravity="right"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#000000"
+        android:gravity="right"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:layout_above="@+id/btnClr"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:gravity="right"
         android:text="0"
-        android:layout_above="@+id/btnClr"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        />
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/operation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:gravity="right"
-        android:layout_below="@+id/inputText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        />
+        android:layout_below="@+id/inputText"
+        android:gravity="right"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
 </RelativeLayout>
