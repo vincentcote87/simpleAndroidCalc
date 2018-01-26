@@ -13,8 +13,9 @@ public class MainActivity extends AppCompatActivity {
     private Button clear, dec, plusMinus;
     private TextView input, opView,  answer;
     private double x = 0;
-    private double y = 0;
-    private char operation = '\u0000' ;
+    private double y = Double.NaN;
+    private String operand = null;
+    private String inputVal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,89 +26,141 @@ public class MainActivity extends AppCompatActivity {
 
         zero.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '0');
+                setValue("0");
+                answer.setText(inputVal);
             }
         });
 
         one.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '1');
+                setValue("1");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '1');
             }
         });
 
         two.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '2');
+                setValue("2");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '2');
             }
         });
 
         three.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '3');
+                setValue("3");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '3');
             }
         });
 
         four.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '4');
+                setValue("4");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '4');
             }
         });
 
         five.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '5');
+                setValue("5");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '5');
             }
         });
 
         six.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '6');
+                setValue("6");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '6');
             }
         });
 
         seven.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '7');
+                setValue("7");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '7');
             }
         });
 
         eight.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '8');
+                setValue("8");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '8');
             }
         });
 
         nine.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '9');
+                setValue("9");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '9');
             }
         });
 
         dec.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                input.setText(input.getText().toString() + '.');
+                setValue(".");
+                answer.setText(inputVal);
+//                input.setText(input.getText().toString() + '.');
             }
         });
 
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if((operation == '\u0000' || operation == '-' || operation == '*' || operation == '/') && input.getText() != "") {
-                    x = Double.parseDouble(input.getText().toString());
-                    opView.setText(input.getText().toString() + ' ' + '+');
-                    input.setText("");
-                    answer.setText("");
-                    operation = '+';
+                if(inputVal != null) {
+                    opClicked("+");
+                    input.setText(operand);
+
+                }
+            }
+        });
+
+        sub.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(inputVal != null) {
+                    opClicked("-");
+                    input.setText(operand);
+
+                }
+            }
+        });
+
+        mult.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(inputVal != null) {
+                    opClicked("*");
+                    input.setText(operand);
+
+                }
+            }
+        });
+
+        divide.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(inputVal != null) {
+                    opClicked("/");
+                    input.setText(operand);
+
                 }
             }
         });
 
         equal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                y = Double.parseDouble(input.getText().toString());
-                opView.setText(x + " " + operation + " " + y);
-                input.setText("");
-                answer.setText(String.valueOf(x + y));
-                operation = '\u0000';
+                if(operand != null) {
+                    y = Double.parseDouble(inputVal);
+                    if(operand == "/" && y == 0.0) {
+                        answer.setText("Cannot divide by 0");
+                    }
+                    else
+                        answer.setText(getAnsw());
+                }
             }
         });
 
@@ -118,7 +171,8 @@ public class MainActivity extends AppCompatActivity {
                 answer.setText("0");
                 x = 0;
                 y = 0;
-                operation = '\u0000';
+                inputVal = null;
+                operand = null;
             }
         });
 
@@ -147,5 +201,36 @@ public class MainActivity extends AppCompatActivity {
         input = (TextView)findViewById(R.id.inputText);
         opView = (TextView)findViewById(R.id.operation);
         answer = (TextView)findViewById(R.id.answer);
+    }
+
+    private void setValue(String ch) {
+        if(inputVal == null) {
+            inputVal = ch;
+        }
+        else {
+            inputVal += ch;
+        }
+    }
+
+    private void opClicked(String op) {
+        if(x == 0) {
+            x = Double.parseDouble(inputVal);
+            inputVal = null;
+        }
+        operand = op;
+    }
+
+    private String getAnsw() {
+        Double ans;
+        switch (operand) {
+            case "+" : ans = x + y; break;
+            case "-" : ans = x - y; break;
+            case "*" : ans = x * y; break;
+            case "/" : ans = x / y; break;
+            default: ans = 0.0;
+        }
+
+        operand = null;
+        return Double.toString(ans);
     }
 }
