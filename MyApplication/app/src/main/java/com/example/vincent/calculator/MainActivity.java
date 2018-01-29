@@ -1,9 +1,13 @@
 package com.example.vincent.calculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,13 +20,36 @@ public class MainActivity extends AppCompatActivity {
     private double y = Double.NaN;
     private String operand = null;
     private String inputVal;
+    private Switch themeSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.DarkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         setupUIViews();
+
+        themeSwitch = (Switch)findViewById(R.id.themeSwitch);
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            themeSwitch.setChecked(true);
+        }
+        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonVie, boolean isChecked) {
+                if(isChecked) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    restartApp();
+                }
+                else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    restartApp();
+                }
+            }
+        });
 
         zero.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -177,18 +204,12 @@ public class MainActivity extends AppCompatActivity {
                     operand = null;
                     input.setText("");
                 }
-//                x = 0;
-//                y = 0;
-//                inputVal = null;
-//                operand = null;
-//                input.setText("");
             }
         });
 
         clear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 input.setText("");
-//                opView.setText("");
                 answer.setText("0");
                 x = 0;
                 y = 0;
@@ -197,6 +218,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void restartApp() {
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void setupUIViews() {
@@ -219,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
         dec = (Button)findViewById(R.id.btnDecimal);
         plusMinus = (Button)findViewById(R.id.btnSign);
 
-        input = (TextView)findViewById(R.id.inputText);
+        input = (TextView)findViewById(R.id.operandText);
 //        opView = (TextView)findViewById(R.id.operation);
         answer = (TextView)findViewById(R.id.answer);
     }
