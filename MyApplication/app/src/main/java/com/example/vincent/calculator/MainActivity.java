@@ -234,7 +234,6 @@ public class MainActivity extends AppCompatActivity {
         plusMinus = (Button)findViewById(R.id.btnSign);
 
         input = (TextView)findViewById(R.id.operandText);
-//        opView = (TextView)findViewById(R.id.operation);
         answer = (TextView)findViewById(R.id.answer);
     }
 
