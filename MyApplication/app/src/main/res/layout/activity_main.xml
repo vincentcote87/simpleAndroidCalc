@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="?attr/backgroundColour"
     tools:context="com.example.vincent.calculator.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
@@ -20,7 +20,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn9"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -34,7 +34,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn8"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -48,7 +48,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn7"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -62,7 +62,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn6"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -76,7 +76,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn5"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -90,7 +90,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn4"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -104,7 +104,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn3"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -118,7 +118,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn2"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -132,7 +132,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn1"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
     <!--android:layout_alignBaseline="@+id/btn2"-->
 
@@ -146,7 +146,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn0"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp"
         android:layout_toRightOf="@+id/btn1"
         android:layout_toEndOf="@+id/btn1" />
@@ -162,7 +162,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnDec"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -176,7 +176,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnAdd"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -190,7 +190,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnSub"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -204,7 +204,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnMult"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -218,7 +218,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnDiv"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -234,7 +234,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnClr"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -248,7 +248,7 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnSign"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <Button
@@ -262,16 +262,15 @@
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btnEqual"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="36sp" />
 
     <TextView
-        android:id="@+id/inputText"
+        android:id="@+id/operandText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
         android:gravity="right"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="30sp"
         android:layout_above="@+id/answer"
         android:layout_alignParentLeft="true"
@@ -286,7 +285,21 @@
         android:layout_alignParentRight="true"
         android:gravity="right"
         android:text="0"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/textColour"
         android:textSize="30sp" />
+
+    <Switch
+        android:id="@+id/themeSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/theme"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/btnClr"
+        android:layout_toEndOf="@+id/btnClr"
+        android:textColor="?attr/textColour"/>
 
 </RelativeLayout>
