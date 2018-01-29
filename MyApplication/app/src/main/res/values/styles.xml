@@ -4,14 +4,11 @@
     <!-- Light theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#6aa2d9</item>
+        <item name="colorPrimaryDark">#537fab</item>
+        <item name="colorAccent">#6c4dd4</item>
         <item name="backgroundColour">#fcfcfc</item>
         <item name="textColour">#4b4b4b</item>
-        <item name="btn">#fcfcfc</item>
-        <item name="textBoxColour">#fcfcfc</item>
-        <item name="tintColour">#fcfcfc</item>
     </style>
 
     <!-- Base application theme. -->
@@ -20,11 +17,8 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#4b4b4b</item>
         <item name="colorPrimaryDark">#000000</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#6c4dd4</item>
         <item name="backgroundColour">#4b4b4b</item>
         <item name="textColour">#fcfcfc</item>
-        <item name="btn">#4b4b4b</item>
-        <item name="textBoxColour">#4b4b4b</item>
-        <item name="tintColour">#4b4b4b</item>
     </style>
 </resources>

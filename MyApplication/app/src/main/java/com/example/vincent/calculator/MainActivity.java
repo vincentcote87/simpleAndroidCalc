@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("1");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '1');
             }
         });
 
@@ -71,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("2");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '2');
             }
         });
 
@@ -79,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("3");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '3');
             }
         });
 
@@ -87,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("4");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '4');
             }
         });
 
@@ -95,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("5");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '5');
             }
         });
 
@@ -103,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("6");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '6');
             }
         });
 
@@ -111,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("7");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '7');
             }
         });
 
@@ -119,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("8");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '8');
             }
         });
 
@@ -127,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue("9");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '9');
             }
         });
 
@@ -135,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setValue(".");
                 answer.setText(inputVal);
-//                input.setText(input.getText().toString() + '.');
             }
         });
 
@@ -155,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 if(inputVal != null) {
                     opClicked("+");
                     input.setText(operand);
-
                 }
             }
         });
@@ -165,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
                 if(inputVal != null) {
                     opClicked("-");
                     input.setText(operand);
-
                 }
             }
         });
@@ -175,7 +163,6 @@ public class MainActivity extends AppCompatActivity {
                 if(inputVal != null) {
                     opClicked("*");
                     input.setText(operand);
-
                 }
             }
         });
@@ -185,7 +172,6 @@ public class MainActivity extends AppCompatActivity {
                 if(inputVal != null) {
                     opClicked("/");
                     input.setText(operand);
-
                 }
             }
         });
@@ -256,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
         if(inputVal == null) {
             inputVal = ch;
         }
-        else {
+        else if(inputVal.length() <= 12) {
             inputVal += ch;
         }
     }
