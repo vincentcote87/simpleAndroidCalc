@@ -111,6 +111,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        plusMinus.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(inputVal != null) {
+                    double tmp = Double.parseDouble(inputVal);
+                    tmp = tmp - 2*tmp;
+                    inputVal = Double.toString(tmp);
+                    answer.setText(inputVal);
+                }
+            }
+        });
+
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(inputVal != null) {
@@ -153,21 +164,31 @@ public class MainActivity extends AppCompatActivity {
 
         equal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(operand != null) {
+                if(operand != null && inputVal != null) {
                     y = Double.parseDouble(inputVal);
                     if(operand == "/" && y == 0.0) {
                         answer.setText("Cannot divide by 0");
                     }
                     else
                         answer.setText(getAnsw());
+                    x = 0;
+                    y = 0;
+                    inputVal = null;
+                    operand = null;
+                    input.setText("");
                 }
+//                x = 0;
+//                y = 0;
+//                inputVal = null;
+//                operand = null;
+//                input.setText("");
             }
         });
 
         clear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 input.setText("");
-                opView.setText("");
+//                opView.setText("");
                 answer.setText("0");
                 x = 0;
                 y = 0;
@@ -199,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         plusMinus = (Button)findViewById(R.id.btnSign);
 
         input = (TextView)findViewById(R.id.inputText);
-        opView = (TextView)findViewById(R.id.operation);
+//        opView = (TextView)findViewById(R.id.operation);
         answer = (TextView)findViewById(R.id.answer);
     }
 

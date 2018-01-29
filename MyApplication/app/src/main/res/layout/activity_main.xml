@@ -142,15 +142,14 @@
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnDecimal"
-        android:layout_toStartOf="@+id/btnDecimal"
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
         android:text="@string/btn0"
         android:textColor="@android:color/white"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        android:layout_toRightOf="@+id/btn1"
+        android:layout_toEndOf="@+id/btn1" />
 
     <Button
         android:id="@+id/btnDecimal"
@@ -270,13 +269,13 @@
         android:id="@+id/inputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="#000000"
         android:gravity="right"
         android:textColor="@android:color/white"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_above="@+id/answer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/answer"
@@ -287,17 +286,6 @@
         android:layout_alignParentRight="true"
         android:gravity="right"
         android:text="0"
-        android:textColor="@android:color/white"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/operation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/inputText"
-        android:gravity="right"
         android:textColor="@android:color/white"
         android:textSize="30sp" />
 
