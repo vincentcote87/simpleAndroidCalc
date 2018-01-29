@@ -1,6 +1,7 @@
 package com.example.vincent.calculator;
 
 import android.content.Intent;
+import android.icu.text.DecimalFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button zero, one, two, three, four, five, six, seven, eight, nine;
     private Button add, sub, mult, divide, equal;
     private Button clear, dec, plusMinus;
-    private TextView input, opView,  answer;
+    private TextView input, answer;
     private double x = 0;
     private double y = Double.NaN;
     private String operand = null;
@@ -269,7 +270,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getAnsw() {
-        Double ans;
+        double ans;
+        int checkInt;
         switch (operand) {
             case "+" : ans = x + y; break;
             case "-" : ans = x - y; break;
@@ -277,8 +279,12 @@ public class MainActivity extends AppCompatActivity {
             case "/" : ans = x / y; break;
             default: ans = 0.0;
         }
-
         operand = null;
-        return Double.toString(ans);
+        checkInt = (int)ans;
+        if((double)checkInt - ans != 0) {
+            return Double.toString(ans);
+        }
+        else
+            return Integer.toString((int)ans);
     }
 }
